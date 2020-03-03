@@ -1,31 +1,35 @@
 import math
 
-# Obtain input data
+# Obtain input data and verify
 
-    # 
-    # Width for cross passages
+# passageWidth = input("Passage width: ")
+#truckSize = input("Truck size: ")
 
 # Calculate volume of crushed rock and spoil which will be removed
-
-def calculateRock(passageWidth):
+def calculateRockVolume(passageWidth):
+    # Returns cubic metres
     return(
-        # Round to 2 decimal places
+        # Round to nearest integer
         round(
             # Multiply by 8 stations and add 10%
             8 * 1.1 * (
                 # Calculate tunnel
-                float(math.pi) * math.sqrt(3) * 16500 +
+                float(math.pi) * math.pow(3, 2) * 16500 +
                 # Calculate cross passages
                 16500 / 240 * 8 * 3.5 * float(passageWidth)
             )
-        , 2)
+        )
     )
 
-print(calculateRock(input()))
 
 # Calculate weight of crushed rock
-
-# def calculateRockWeight():
-
+def calculateRockMass(volume):
+    # Returns tonnes
+    # mass = density * volume
+    return(2.35 * volume)
 
 # Calculate number of trucks required for transport
+def calculateTrucks(mass, size):
+    return(math.ceil(mass / size))
+
+print(float(math.pi) * math.pow(3, 2) * 16500)
