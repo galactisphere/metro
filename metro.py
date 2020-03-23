@@ -11,8 +11,8 @@ def calculateRockVolume(passageWidth):
     return(
         # Round to nearest integer
         round(
-            # Multiply by 8 stations and add 10%
-            8 * 1.1 * (
+            # Add 10%
+            1.1 * (
                 # Calculate tunnel
                 float(math.pi) * math.pow(3, 2) * 16500 +
                 # Calculate cross passages
