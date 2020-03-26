@@ -7,6 +7,16 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    inputs:
+      passageWidth:
+        description: "Passage width of tunnels"
+        required: true
+        default: 1
+      truckSize:
+        description: "Capacity of trucks"
+        required: true
+        default: "A"
+
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.8
