@@ -39,7 +39,7 @@ except ValueError:
 if passageWidth < 0:
     raise Exception("Passage width — Please enter a positive integer.")
 
-truckSize = input("\nA: 11 tonne\nB: 15 tonne\nC: 20 tonne\nEnter the truck size from the above options, with A, B, or C: ")
+truckSize = input("\nA: 11 tonne\nB: 15 tonne\nC: 20 tonne\n\nEnter the truck size from the above options, with A, B, or C: ")
 if truckSize == "A":
     truckSize = 11
 elif truckSize == "B":
