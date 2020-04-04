@@ -21,7 +21,7 @@ def calculateRockVolume(passageWidth):
 def calculateRockMass(volume):
     # Returns tonnes
     # mass = density * volume
-    return(round(2.35 * volume, 2))
+    return(round(2.35 * volume, 2), 2)
 
 # Calculate number of trucks required for transport
 def calculateTrucks(mass, size):
